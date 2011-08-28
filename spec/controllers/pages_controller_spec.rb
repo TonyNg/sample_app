@@ -15,5 +15,9 @@ describe PagesController do
       response.should be_success
     end
   end
+  
+    def help
+    @title = "Help"
+  end
 
 end
