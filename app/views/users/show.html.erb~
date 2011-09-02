@@ -1,3 +1,5 @@
+<%= @user.name %>, <%= @user.email %>
+
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
