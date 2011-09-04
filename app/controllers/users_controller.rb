@@ -13,11 +13,11 @@ class UsersController < ApplicationController
     @title = "Sign up"
   end
   
-   def create
+  def create
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Tooter!"
+      flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
       @title = "Sign up"
@@ -25,8 +25,9 @@ class UsersController < ApplicationController
     end
   end
   
-   def edit
-       @title = "Edit user"
+  def edit
+    @user = User.find(params[:id])
+    @title = "Edit user"
   end
   
    def update
@@ -47,6 +48,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(:page => params[:page])
     @title = @user.name
   end
   
@@ -58,10 +60,6 @@ class UsersController < ApplicationController
 
  private
 
-    def authenticate
-      deny_access unless signed_in?
-    end
-	
 	 def correct_user
       @user = User.find(params[:id])
       redirect_to(root_path) unless current_user?(@user)
