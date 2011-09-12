@@ -3,8 +3,10 @@
   <tr>
     <td class="main">
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+      <%= @user.name %>   
+        <br>
+        <br>
+         <%= gravatar_for @user, :size => 150 %>
       </h1>
       <%= render 'follow_form' if signed_in? %>
    <% unless @user.microposts.empty? %>
@@ -15,10 +17,19 @@
       <% end %>
      </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @user.name %><br />
+      <strong>Name: </strong> <%= @user.name %><br />
       <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-      <strong>Microposts</strong> <%= @user.microposts.count %>
+      <strong>Blurbs: </strong> <%= @user.microposts.count %>
       <%= render 'shared/stats' %>
+      <%= @user.email %> 
+      <br>
+  <%= @user.year %> <br>
+  <%= @user.major %> <br>
+  <%= @user.books_sell %> <br>
+  <%= @user.books_buy %> <br>
+  <%= @user.facebook %> <br>
+  <%= @user.restaurants %><br>
+  <%= @user.interests %> 
     </td>
   </tr>
 </table>

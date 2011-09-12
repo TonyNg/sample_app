@@ -10,9 +10,14 @@
 #
 
 class User < ActiveRecord::Base
+
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :name, :email, :password, :password_confirmation, 
+  :remember_me, :major, :year, :books_sell, :books_buy, :facebook, :restaurants,
+  :interests
+
   attr_accessor :password
-  attr_accessible :name, :email, :password, :password_confirmation
-  
+
   has_many :microposts, :dependent => :destroy
   has_many :relationships, :foreign_key => "follower_id",
                            :dependent => :destroy
@@ -37,7 +42,18 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
 
   # Return true if the user's password matches the submitted password.
-
+   
+   define_index do
+   indexes :name
+   indexes year
+   indexes major
+   indexes books_buy
+   indexes books_sell
+   indexes facebook
+   indexes restaurants
+   indexes interests
+   end
+   
    def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
   end
@@ -69,6 +85,16 @@ class User < ActiveRecord::Base
   def unfollow!(followed)
     relationships.find_by_followed_id(followed).destroy
   end
+   
+ def self.search(search)
+  if search
+    where 'name LIKE :search OR year LIKE :search OR books_buy LIKE :search
+	OR books_sell LIKE :search OR facebook LIKE :search OR restaurants LIKE :search
+	OR interests LIKE :search', :search => "%#{search}%"
+  else 
+    scoped
+  end
+end
     
   private
   

@@ -4,11 +4,6 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
 
-  def show
-    @user = User.find(params[:id])
-    @title = @user.name
-  end
-
   def new
     @user = User.new 
     @title = "Sign up"
@@ -18,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to Chat Cal Poly!"
       redirect_to @user
     else
       @title = "Sign up"
@@ -44,7 +39,7 @@ class UsersController < ApplicationController
   
   def index
     @title = "All users"
-    @users = User.paginate(:page => params[:page])
+	@users = User.search(params[:search]).paginate(:page => params[:page])	
   end
   
   def show

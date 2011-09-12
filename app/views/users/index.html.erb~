@@ -1,12 +1,26 @@
-<h1>All users</h1>
+<h1>To find your fellow classmates, just use the search bar below!</h1>
+
+Search with single words only. For example, use the word "chemistry" for the phrase " organic chemistry".
+
+<% form_tag users_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<form method="get" id="searchform" action="users">
+<fieldset class="search">
+	<input type="text" class="box" />
+	<button class="btn" title="Submit Search">Search</button>
+</fieldset>
+</form>
 
 <%= will_paginate %>
 
+
 <ul class="users">
-  <% @users.each do |user| %>
-    <%= render user %>
-  <% end %>
+  <%= render @users %>
 </ul>
 
 <%= will_paginate %>
-

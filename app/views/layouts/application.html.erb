@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Chat Cal Poly</title>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
     <%= javascript_include_tag :defaults %>
@@ -9,7 +9,8 @@
   <body>
     <div class="container">
       <%= render 'layouts/header' %>
-      <section class="round">
+        <%= render 'layouts/facebooklike' %>
+<section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>

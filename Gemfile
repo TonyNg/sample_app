@@ -5,12 +5,13 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
-gem 'sqlite3', '1.3.4'
+# gem 'sunspot_rails'
+ gem 'activerecord'
+ gem 'mysql2', '0.2.7'
+# gem 'sqlite3', '1.3.4'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
-
-
+gem 'thinking-sphinx', '2.0.5'
 
 group :development do
   gem 'rspec-rails', '2.6.1'

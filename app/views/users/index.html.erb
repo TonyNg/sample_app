@@ -1,6 +1,16 @@
-<h1>All users</h1>
+<h1>Find your fellow classmates!</h1>
+
+Search with single words only. For example, use the word "chemistry" for the phrase "organic chemistry".
+<% form_tag users_path, :method => 'get' do %>
+  <fieldset class="search">
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </fieldset>
+<% end %>
+
 
 <%= will_paginate %>
+
 
 <ul class="users">
   <%= render @users %>

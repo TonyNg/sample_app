@@ -1,8 +1,24 @@
 <li>
-  <%= gravatar_for user, :size => 30 %>
-  <%= link_to user.name, user %>
+  <%= gravatar_for user, :size => 150 %>
+  People call me: &nbsp;<b><%= link_to user.name, user %></b>
+  <%= user.email %> 
+  <br>
+  Year in college:   &nbsp;  <b><%= user.year %></b>
+  <br>
+  Major I study:    &nbsp; <b><%= user.major %></b> 
+  <br>
+  Books I'm selling:  &nbsp;   <b><%= user.books_sell %></b> 
+  <br>
+  Books I'd buy:   &nbsp;  <b><%= user.books_buy %></b> 
+  <br>
+  Facebook page:   &nbsp;  <b><%= user.facebook %></b> 
+  <br>
+  I love to eat here:  &nbsp;   <b><%= user.restaurants %></b>
+  <br>
+  My hobbies are:  &nbsp;   <b><%= user.interests %></b>
   <% if current_user.admin? %>
   | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete #{user.name}" %>
+        
   <% end %>
 </li>

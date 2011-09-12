@@ -7,17 +7,18 @@
         <%= render 'shared/feed' %>
       </td>
       <td class="sidebar round">
-        <%= render 'shared/user_info' %>
+     <%= render 'shared/user_info' %>
+        <%= render 'shared/stats' %>
       </td>
     </tr>
   </table>
 <% else %>
-  <h1>Sample App</h1>
+  <h1>Hello Cal Poly Pomona students!</h1>
 
   <p>
-    This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-    sample application.
+    Want to filter out the junk on Facebook and connect with fellow
+    <a href="www.csupomona.edu/">Cal Poly Pomona</a>
+    classmates instead? Sign up with your <b>csupomona.edu</b> email address to begin!
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>

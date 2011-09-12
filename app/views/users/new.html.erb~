@@ -16,7 +16,35 @@
   </div>
   <div class="field">
     <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation %> 
+  </div>
+  <div class="field">
+    <%= f.label :"year" %><br />
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :"major" %><br />
+    <%= f.text_field :major %>
+  </div>
+  <div class="field">
+    <%= f.label :"I'm looking to buy these books" %><br />
+    <%= f.password_field :books_buy %>
+  </div>
+  <div class="field">
+    <%= f.label :"I'm looking to sell these books" %><br />
+    <%= f.password_field :books_sell %>
+  </div>
+    <div class="field">
+    <%= f.label :"My Facebook page" %><br />
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
+    <%= f.label :"I love to eat at these restaurants" %><br />
+    <%= f.text_field :restaurants %>
+  </div>
+  <div class="field">
+    <%= f.label :Interests %><br />
+    <%= f.password_field :interests %>
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
