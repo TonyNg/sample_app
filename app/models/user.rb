@@ -88,9 +88,9 @@ class User < ActiveRecord::Base
    
  def self.search(search)
   if search
-    where 'name LIKE :search OR year LIKE :search OR books_buy LIKE :search
-	OR books_sell LIKE :search OR facebook LIKE :search OR restaurants LIKE :search
-	OR interests LIKE :search', :search => "%#{search.downcase}%"
+    where 'LOWER (name) LIKE :search OR LOWER (year) LIKE :search OR LOWER (books_buy) LIKE :search
+	OR LOWER (books_sell) LIKE :search OR LOWER (facebook) LIKE :search OR LOWER (restaurants) LIKE :search
+	OR LOWER (interests) LIKE :search', :search => "%#{search.downcase}%"
   else 
     scoped
   end
