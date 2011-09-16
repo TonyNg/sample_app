@@ -90,7 +90,7 @@ class User < ActiveRecord::Base
   if search
     where 'name LIKE :search OR year LIKE :search OR books_buy LIKE :search
 	OR books_sell LIKE :search OR facebook LIKE :search OR restaurants LIKE :search
-	OR interests LIKE :search', :search => "%#{search}%"
+	OR interests LIKE :search', :uniqueness => { :case_sensitive => false }, :search => "%#{search}%"
   else 
     scoped
   end
