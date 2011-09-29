@@ -1,7 +1,6 @@
 SampleApp::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
    ActionMailer::Base.perform_deliveries = true   
 
@@ -11,9 +10,9 @@ ActionMailer::Base.smtp_settings              = {
       :port                 => "587",
       :domain               => "localhost:3000",
       :enable_starttls_auto => true,
-      :authentication       => :login,
-      :user_name            => "blah@gmail.com",
-      :password             => "password"
+      :authentication       => "plain",
+      :user_name            => "my_gmail_account@gmail.com",
+      :password             => "my_pw"
   }
 
   

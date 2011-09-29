@@ -5,6 +5,9 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'aws-s3'
+gem 'paperclip'
+gem 'sorcery'
 gem 'taps'
 # gem 'sunspot_rails'
  gem 'activerecord'

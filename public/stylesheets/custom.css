@@ -301,11 +301,11 @@ height: 4em; /* replace 2em with your chosen value, in px or whatever */
 fieldset.search {
 	border: none;
 	width: 800px;
-    height: 25px;
+    height: 40px;
 	margin: 0 auto;
 	background: #222;
 }
-.search input, .search button {
+#.search input, .search button {
 	border: none;
 	#float: left;
 }
@@ -333,3 +333,48 @@ fieldset.search {
 	background: #fbc900 url(search_bg.gif) no-repeat bottom right;
 }
 
+/*Submit button*/
+.search input, .search button {
+	border-radius: 3px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.35, rgb(16,87,25)),
+		color-stop(0.68, rgb(27,148,43)),
+		color-stop(0.86, rgb(38,212,61))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(16,87,25) 35%,
+		rgb(27,148,43) 68%,
+		rgb(38,212,61) 86%
+	);
+	color: white;
+	font-weight: bold;
+	text-shadow: white 1px 1px 5px;
+	padding: 10px;
+}
+
+/* trying to alter the submit button*/
+#.actions {
+border-radius: 3px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.35, rgb(16,87,25)),
+		color-stop(0.68, rgb(27,148,43)),
+		color-stop(0.86, rgb(38,212,61))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(16,87,25) 35%,
+		rgb(27,148,43) 68%,
+		rgb(38,212,61) 86%
+	);
+	color: white;
+	font-weight: bold;
+	text-shadow: white 1px 1px 5px;
+	padding: 10px;
+}

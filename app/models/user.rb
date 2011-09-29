@@ -27,7 +27,11 @@ class User < ActiveRecord::Base
                                    :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
 						     
-  email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  # Cal Poly email regex
+  email_regex = /\A[\w+\-.]+@[csupomona\d\-.]+[edu]+\z/i
+  
+  #original email regex for all emails 
+  #email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,  :presence => true,
                     :length   => { :maximum => 50 }
@@ -37,11 +41,22 @@ class User < ActiveRecord::Base
 					
   validates :password, :presence     => true,
                        :confirmation => true,
-                       :length       => { :within => 6..40 }								
+                       :length       => { :within => 6..40 }	
+					   
+  validates :major, :length		=> { :maximum => 60}
+  validates :year, :length		=> { :maximum => 30}				
+  validates :books_buy, :length		=> { :maximum => 200}																	
+  validates :books_sell, :length		=> { :maximum => 200}																	
+  validates :facebook, :length		=> { :maximum => 80}																	
+  validates :restaurants, :length		=> { :maximum => 80}																	
+  validates :interests, :length		=> { :maximum => 120}																	
+													
+																	
 					
   before_save :encrypt_password
 
   # Return true if the user's password matches the submitted password.
+  
    
    define_index do
    indexes :name

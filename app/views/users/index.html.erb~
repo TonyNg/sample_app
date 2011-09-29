@@ -1,20 +1,13 @@
-<h1>To find your fellow classmates, just use the search bar below!</h1>
+<h1>Find your fellow classmates!</h1>
 
-Search with single words only. For example, use the word "chemistry" for the phrase " organic chemistry".
-
+Search with single words only. For example, use the word "chemistry" for the phrase "organic chemistry".
 <% form_tag users_path, :method => 'get' do %>
-  <p>
+  <fieldset class="search">
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
-  </p>
+  </fieldset>
 <% end %>
 
-<form method="get" id="searchform" action="users">
-<fieldset class="search">
-	<input type="text" class="box" />
-	<button class="btn" title="Submit Search">Search</button>
-</fieldset>
-</form>
 
 <%= will_paginate %>
 

@@ -3,7 +3,7 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :"name (Your real name)" %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -18,6 +18,10 @@
     <%= f.label :password_confirmation, "Confirmation" %><br />
     <%= f.password_field :password_confirmation %> 
   </div>
+  <br>
+  You may skip the fields below and choose to enter your information later.
+  <br>
+  <br>
   <div class="field">
     <%= f.label :"year" %><br />
     <%= f.text_field :year %>
@@ -35,7 +39,7 @@
     <%= f.text_field :books_sell %>
   </div>
     <div class="field">
-    <%= f.label :"My Facebook page" %><br />
+    <%= f.label :"My Facebook or Email" %><br />
     <%= f.text_field :facebook %>
   </div>
   <div class="field">
@@ -43,7 +47,7 @@
     <%= f.text_field :restaurants %>
   </div>
   <div class="field">
-    <%= f.label :Interests %><br />
+    <%= f.label :"Clubs/Activities/Interests" %><br />
     <%= f.text_field :interests %>
   </div>
   <div class="actions">

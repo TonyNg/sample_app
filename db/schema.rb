@@ -11,20 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110909104426) do
+ActiveRecord::Schema.define(:version => 20110919020857) do
 
   create_table "microposts", :force => true do |t|
-    t.string   "content"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "content"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "photo_file_name"
+    t.string    "photo_content_type"
+    t.integer   "photo_file_size"
+    t.datetime  "photo_updated_at"
   end
 
   create_table "relationships", :force => true do |t|
-    t.integer  "follower_id"
-    t.integer  "followed_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "follower_id"
+    t.integer   "followed_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
@@ -32,22 +36,26 @@ ActiveRecord::Schema.define(:version => 20110909104426) do
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.boolean  "admin",              :default => false
-    t.string   "major"
-    t.string   "year"
-    t.string   "books_sell"
-    t.string   "books_buy"
-    t.string   "facebook"
-    t.string   "restaurants"
-    t.string   "interests"
+    t.string    "name"
+    t.string    "email"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "encrypted_password"
+    t.string    "salt"
+    t.boolean   "admin",                       :default => false
+    t.string    "major"
+    t.string    "year"
+    t.string    "books_sell"
+    t.string    "books_buy"
+    t.string    "facebook"
+    t.string    "restaurants"
+    t.string    "interests"
+    t.string    "activation_state"
+    t.string    "activation_token"
+    t.datetime  "activation_token_expires_at"
   end
 
+  add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

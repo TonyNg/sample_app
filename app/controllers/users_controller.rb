@@ -3,6 +3,16 @@ class UsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
   before_filter :admin_user,   :only => :destroy
+  skip_before_filter :require_login, :only => [:index, :new, :create, :activate]
+
+  def activate
+    if @user = User.load_from_activation_token(params[:id])
+      @user.activate!
+      redirect_to(login_path, :notice => 'User was successfully activated.')
+    else
+      not_authenticated
+    end
+  end 
 
   def new
     @user = User.new 
@@ -13,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Chat Cal Poly!"
+      flash[:success] = "Welcome to Poly Who! Click on the 'Friends' tab to search for your classmates."
       redirect_to @user
     else
       @title = "Sign up"
