@@ -7,8 +7,13 @@ class Micropost < ActiveRecord::Base
     :medium => "500x500",
     :large => "600x400"
   },
-	:url  => "/assets/photos/:id/:style/:basename.:extension",
-	:path => ":rails_root/public/assets/photos/:id/:style/:basename.:extension"
+   :storage => :s3,
+   :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+#	:url  => "/assets/photos/:id/:style/:basename.:extension",
+#	:path => ":rails_root/public/assets/photos/:id/:style/:basename.:extension",
+#	:url  => ":attachment/:id/:style.:extension"
+#	:path => ":attachment/:id/:style.:extension",
+	:bucket => 'fashionappbucket'
 	
 #validates_attachment_presence :photo
 validates_attachment_size :photo, :less_than => 5.megabytes
