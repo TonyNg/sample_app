@@ -50,6 +50,10 @@
     <%= f.label :"Clubs/Activities/Interests" %><br />
     <%= f.text_field :interests %>
   </div>
+  <div>
+  <%= f.label :"Acceptance of Agreement (By checking this box, you have agreed to PolyWho's terms and conditions)" %> <br />
+  <%= f.check_box :check %> 
+  </div>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

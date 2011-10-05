@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110919020857) do
+ActiveRecord::Schema.define(:version => 20111005065729) do
 
   create_table "microposts", :force => true do |t|
     t.string    "content"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(:version => 20110919020857) do
     t.string    "activation_state"
     t.string    "activation_token"
     t.datetime  "activation_token_expires_at"
+    t.string    "check"
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
