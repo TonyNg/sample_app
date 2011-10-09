@@ -52,7 +52,7 @@ class User < ActiveRecord::Base
   validates :facebook, :presence => true,
 					   :length		=> { :maximum => 80}																	
   validates :restaurants, :length		=> { :maximum => 80}																	
-  validates :interests, :length		=> { :maximum => 120}																	
+  validates :interests, :length		=> { :maximum => 160}																	
 													
 																	
 					

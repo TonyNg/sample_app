@@ -1,6 +1,6 @@
 <h1>Find your fellow classmates!</h1>
 
-Search with single words only. For example, use the word "chemistry" for the phrase "organic chemistry".
+Search by using keywords for best results.
 <% form_tag users_path, :method => 'get' do %>
   <fieldset class="search">
     <%= text_field_tag :search, params[:search] %>
