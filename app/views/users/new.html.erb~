@@ -39,7 +39,7 @@
     <%= f.text_field :books_sell %>
   </div>
     <div class="field">
-    <%= f.label :"My Facebook or Email" %><br />
+    <%= f.label :"My Facebook webpage" %><br />
     <%= f.text_field :facebook %>
   </div>
   <div class="field">
@@ -49,6 +49,10 @@
   <div class="field">
     <%= f.label :"Clubs/Activities/Interests" %><br />
     <%= f.text_field :interests %>
+  </div>
+  <div>
+  <%= f.label :"Terms of Agreement (By checking this box, you have agreed to PolyWho's Terms of Agreement below)" %> <br />
+  <%= f.check_box :check %> 
   </div>
   <div class="actions">
     <%= f.submit "Sign up" %>

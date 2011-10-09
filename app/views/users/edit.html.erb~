@@ -23,7 +23,7 @@
     <%= f.text_field :year %>
   </div>
   <div class="field">
-    <%= f.label :"major" %><br />
+    <%= f.label :"major/Concentration" %><br />
     <%= f.text_field :major %>
   </div>
   <div class="field">
@@ -35,7 +35,7 @@
     <%= f.text_field :books_sell %>
   </div>
     <div class="field">
-    <%= f.label :"My Facebook page" %><br />
+    <%= f.label :"Facebook/Email" %><br />
     <%= f.text_field :facebook %>
   </div>
   <div class="field">
@@ -43,7 +43,7 @@
     <%= f.text_field :restaurants %>
   </div>
   <div class="field">
-    <%= f.label :Interests %><br />
+    <%= f.label :"My Sports/Clubs/Activities/Interests" %><br />
     <%= f.text_field :interests %>
   </div>
   <div class="actions">

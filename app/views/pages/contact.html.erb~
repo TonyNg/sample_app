@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Herro Dere!</title>
+    <h1>Contact Us</h1>
   </head>
   <body>
-    <p>Say hi when this page gets going!</p>
+    <p>In the event of any technical difficulties, the best way to reach us is through our <a href="www.facebook.com/">Facebook</a> page.</p>
   </body>
 </html>

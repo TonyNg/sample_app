@@ -1,6 +1,6 @@
 <li>
   <%= gravatar_for user, :size => 150 %>
-  People call me: &nbsp;<b><%= link_to user.name, user %></b>
+  My name is: &nbsp;<b><%= link_to user.name, user %></b>
   <%= user.email %> 
   <br>
   Year in college:   &nbsp;  <b><%= user.year %></b>
@@ -11,7 +11,7 @@
   <br>
   Books I'd buy:   &nbsp;  <b><%= user.books_buy %></b> 
   <br>
-  Facebook/Email:   &nbsp;  <b><%= user.facebook %></b> 
+  Facebook:   &nbsp;  <b><%= user.facebook %></b> 
   <br>
   I love eating at:  &nbsp;   <b><%= user.restaurants %></b>
   <br>

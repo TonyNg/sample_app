@@ -49,7 +49,8 @@ class User < ActiveRecord::Base
   validates :year, :length		=> { :maximum => 30}				
   validates :books_buy, :length		=> { :maximum => 200}																	
   validates :books_sell, :length		=> { :maximum => 200}																	
-  validates :facebook, :length		=> { :maximum => 80}																	
+  validates :facebook, :presence => true,
+					   :length		=> { :maximum => 80}																	
   validates :restaurants, :length		=> { :maximum => 80}																	
   validates :interests, :length		=> { :maximum => 120}																	
 													

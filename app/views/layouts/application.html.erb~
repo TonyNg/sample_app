@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>PolyWho</title>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
     <%= javascript_include_tag :defaults %>
   </head>
   <body>
     <div class="container">
+            <%= render 'layouts/facebooklike' %>
       <%= render 'layouts/header' %>
-        <%= render 'layouts/facebooklike' %>
 <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
