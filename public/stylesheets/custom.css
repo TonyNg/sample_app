@@ -286,12 +286,12 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
-/* Form elements */
-########div.field {
+/* Search Form */
+#div.field {
 border : 1px solid Black;
 background-color : #CCCCCC;
 color : #0E1930;
-font-size : 12px;
+font-size : 14px;
 font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
 font-weight : bold;
 height: 4em; /* replace 2em with your chosen value, in px or whatever */
@@ -303,6 +303,7 @@ fieldset.search {
     height: 40px;
 	margin: 0 auto;
 	background: #222;
+    border-radius: 8px;
 }
 #.search input, .search button {
 	border: none;
@@ -311,7 +312,7 @@ fieldset.search {
 #.search input.box {
 	color: #fff;
 	font-size: 1.2em;
-	width: 190px;
+	width: 290px;
 	height: 30px;
 	padding: 8px 5px 0;
 	background: #616161 url(search_bg.gif) no-repeat;
@@ -322,7 +323,7 @@ fieldset.search {
 	outline: none;
 }
 #.search button.btn {
-	width: 38px;
+	width: 138px;
 	height: 38px;
 	cursor: pointer;
 	text-indent: -9999px;
@@ -355,8 +356,8 @@ fieldset.search {
 	padding: 10px;
 }
 
-/* trying to alter the submit button*/
-#.actions {
+/* trying to alter the follow button*/
+.Follow input {
 border-radius: 3px;
 	background-image: -webkit-gradient(
 		linear,
@@ -372,8 +373,42 @@ border-radius: 3px;
 		rgb(27,148,43) 68%,
 		rgb(38,212,61) 86%
 	);
-	color: white;
+	color: White;
 	font-weight: bold;
+    font-size: 12px;
 	text-shadow: white 1px 1px 5px;
 	padding: 10px;
+    width: 7em;
+    text-align: top;
+
 }
+
+/* Altering the unfollow button*/
+.unfollow input {
+border-radius: 3px;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.35, rgb(16,87,25)),
+		color-stop(0.68, rgb(27,148,43)),
+		color-stop(0.86, rgb(38,212,61))
+	);
+	background-image: -moz-linear-gradient(
+		center bottom,
+		rgb(16,87,25) 35%,
+		rgb(27,148,43) 68%,
+		rgb(38,212,61) 86%
+	);
+	color: White;
+	font-weight: bold;
+    font-size: 12px;
+	text-shadow: white 1px 1px 5px;
+	padding: 10px;
+    width: 7em;
+}
+
+.space {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    }

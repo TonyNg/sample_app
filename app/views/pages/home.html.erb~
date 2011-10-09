@@ -16,8 +16,9 @@
   <h1>Hello Cal Poly Pomona students!</h1>
 
   <p>
-    Want a way to sell/buy your books affordably? Want to find out what your
-    classmates are up to on campus? And which ones are making a significant impact? Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
+    Who are you on campus? What do you bring to the table? Need a way to sell/buy your books affordably? And find out what your
+    classmates are up to on campus? Which ones are making a significant impact? <br>
+    Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
   </p>
 
   <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
