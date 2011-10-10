@@ -19,7 +19,7 @@
     <%= f.password_field :password_confirmation %> 
   </div>
   <br>
-  You may skip the fields below and choose to enter your information later.
+  If you want to skip the fields below just enter in your Facebook URL and enter the rest later.
   <br>
   <br>
   <div class="field">
