@@ -1,23 +1,24 @@
 .container {
-  width: 880px;
+  width: 900px;
 }
 
 body {
   background: #228B22
   }
 
+/*Bordering*/
 #body {
   border: 30px outset #006400; 
   }
 
 header {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 
 iframe {
-  margin-bottom: -11.8em;
-  margin-top:  10em;
-  margin-left: 32em;
+  margin-bottom: -10.2em;
+  margin-top:  2em;
+  margin-left: 35.5em;
   padding-top: 0px;
   color: #97FFFF;
   background: #90EE90;
@@ -32,10 +33,11 @@ header img {
 }
 
 section {
-  margin-top: 1em;
+  margin-top: 1.5em;
   font-size: 120%;
+  font-family: helvetica;
   padding: 20px;
-  background: #F4F4F4;
+  background: #FFFFFF;
 }
 
 section h1 {
@@ -57,10 +59,11 @@ a:hover {
 a:visited {
   color: #069;
 }
+			        
 /* Navigation */
 
 header nav {
-  margin-top: -8px;
+  margin-top: 95px;
   }
 
 nav {
@@ -74,7 +77,8 @@ nav {
   background-color: #141414;
   padding: 0 0.7em;
   white-space: nowrap;
-  font-size: 100%;
+  font-size: 110%;
+  font-family: Helvetica;
 }
 
 nav ul {
@@ -85,6 +89,8 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 0.5em 0;
 }
 
@@ -282,7 +288,7 @@ form.new_micropost {
 }
 
 form.new_micropost textarea {
-  height: 4em;
+  height: 8em;
   margin-bottom: 0;
 }
 
