@@ -15,12 +15,12 @@ header {
   padding-top: 30px;
 }
 
-iframe {
-  margin-bottom: -10.2em;
-  margin-top:  2em;
+.fb-like {
+  margin-top:  4.4em;
+    vertical-align: top;
+    margin-bottom: -19.2em;
   margin-left: 35.5em;
-  padding-top: 0px;
-  color: #97FFFF;
+#  color: #97FFFF;
   background: #90EE90;
   padding: 8px; 
   -moz-border-radius:    10px;
