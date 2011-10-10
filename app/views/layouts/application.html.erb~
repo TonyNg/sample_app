@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="container">
-            <%= render 'layouts/facebooklike' %>
+      <%= render 'layouts/facebooklike' %>
       <%= render 'layouts/header' %>
 <section class="round">
         <% flash.each do |key, value| %>

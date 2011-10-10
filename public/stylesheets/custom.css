@@ -16,7 +16,7 @@ header {
 }
 
 .fb-like {
-  margin-top:  4.4em;
+  margin-top:  1.8em;
     vertical-align: top;
     margin-bottom: -19.2em;
   margin-left: 35.5em;
@@ -417,4 +417,11 @@ border-radius: 3px;
 .space {
     margin-top: 5px;
     margin-bottom: 7px;
+    }
+    
+.beta {
+   margin-top:  4.4em;
+    vertical-align: top;
+    margin-bottom: -11.2em;
+    margin-left: 25.7em;
     }
