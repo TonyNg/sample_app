@@ -11,6 +11,10 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
+    <%= f.label :"Facebook webpage" %><br />
+    <%= f.text_field :facebook %>
+  </div>
+  <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
@@ -33,10 +37,6 @@
   <div class="field">
     <%= f.label :"I'm looking to sell these books" %><br />
     <%= f.text_field :books_sell %>
-  </div>
-    <div class="field">
-    <%= f.label :"My Facebook webpage" %><br />
-    <%= f.text_field :facebook %>
   </div>
   <div class="field">
     <%= f.label :"I love to eat at these restaurants" %><br />
