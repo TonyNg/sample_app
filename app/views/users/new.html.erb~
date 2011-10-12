@@ -7,7 +7,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :"email (Your csupomona.edu address)" %><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
@@ -19,7 +19,7 @@
     <%= f.password_field :password_confirmation %> 
   </div>
   <br>
-  If you want to skip the fields below just enter in your Facebook URL and enter the rest later.
+  If you want to skip the fields below, just enter in your Facebook URL and fill in the rest later.
   <br>
   <br>
   <div class="field">
