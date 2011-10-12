@@ -2,6 +2,12 @@ class MicropostsController < ApplicationController
  before_filter :authenticate, :only => [:create, :destroy]
   before_filter :authorized_user, :only => :destroy
   
+  def like
+	@current_user = User.first
+	@micropost = micropost.find(params[:id])
+	@current_user.flag(@micropost, :like)
+	redirect_to home_path, :notice => "you now like this"
+	end
 
    def create
     @micropost = current_user.microposts.build(params[:micropost])

@@ -1,6 +1,10 @@
 class Micropost < ActiveRecord::Base
   attr_accessible :content, :photo  
   belongs_to :user
+  
+  def flaggable
+  make_flaggable :like
+  end
 #  has_attached_file :photo,
 #  :styles =>{
 #    :thumb  => "100x100",

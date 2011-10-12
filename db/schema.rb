@@ -11,17 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111005065729) do
+ActiveRecord::Schema.define(:version => 20111011014206) do
+
+  create_table "flaggings", :force => true do |t|
+    t.string   "flaggable_type"
+    t.integer  "flaggable_id"
+    t.string   "flagger_type"
+    t.integer  "flagger_id"
+    t.text     "reason"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "flaggings", ["flaggable_type", "flaggable_id"], :name => "index_flaggings_on_flaggable_type_and_flaggable_id"
+  add_index "flaggings", ["flagger_type", "flagger_id", "flaggable_type", "flaggable_id"], :name => "access_flaggings"
 
   create_table "microposts", :force => true do |t|
     t.string    "content"
     t.integer   "user_id"
     t.timestamp "created_at"
     t.timestamp "updated_at"
-    t.string    "photo_file_name"
-    t.string    "photo_content_type"
-    t.integer   "photo_file_size"
-    t.datetime  "photo_updated_at"
   end
 
   create_table "relationships", :force => true do |t|
@@ -42,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20111005065729) do
     t.timestamp "updated_at"
     t.string    "encrypted_password"
     t.string    "salt"
-    t.boolean   "admin",                       :default => false
+    t.boolean   "admin",              :default => false
     t.string    "major"
     t.string    "year"
     t.string    "books_sell"
@@ -50,13 +59,9 @@ ActiveRecord::Schema.define(:version => 20111005065729) do
     t.string    "facebook"
     t.string    "restaurants"
     t.string    "interests"
-    t.string    "activation_state"
-    t.string    "activation_token"
-    t.datetime  "activation_token_expires_at"
     t.string    "check"
   end
 
-  add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
 
 end

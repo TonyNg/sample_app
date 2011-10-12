@@ -10,6 +10,9 @@
 #
 
 class User < ActiveRecord::Base
+  def flag
+  make_flagger :flag_once => true
+  end
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :name, :email, :password, :password_confirmation, 
@@ -106,7 +109,8 @@ class User < ActiveRecord::Base
    
  def self.search(search)
   if search
-    where 'LOWER (name) LIKE :search OR LOWER (year) LIKE :search OR LOWER (books_buy) LIKE :search
+    where 'LOWER (name) LIKE :search OR LOWER (year) LIKE :search 
+	OR LOWER (major) LIKE :search OR LOWER (books_buy) LIKE :search
 	OR LOWER (books_sell) LIKE :search OR LOWER (facebook) LIKE :search OR LOWER (restaurants) LIKE :search
 	OR LOWER (interests) LIKE :search', :search => "%#{search.downcase}%"
   else 
