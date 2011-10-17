@@ -2,8 +2,9 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's up?</h1>
+        <h3 class="micropost">What's going on?</h3>
         <%= render 'shared/micropost_form' %>
+                <h3 class="micropost">Newsfeed</h3>
         <%= render 'shared/feed' %>
       </td>
       <td class="sidebar round">
@@ -17,8 +18,8 @@
  <div class="hero-unit">
           <h1>Hello Cal Poly Pomona!</h1>
           <p>
-          <p>Who are you on campus?
-          Need a way to sell/buy your books affordably? 
+          <p>Need a way to communicate with your peers on campus?
+          A way to sell/buy your books affordably? 
           Voice your opinions
           here and be heard.
           Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
