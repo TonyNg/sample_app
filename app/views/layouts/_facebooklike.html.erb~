@@ -7,5 +7,5 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-like" data-href="www.PolyWho.com" data-send="true" 
-data-width="450" data-show-faces="true" data-font="lucida grande"></div>
+data-width="500" data-show-faces="true" data-font="lucida grande"></div>
 

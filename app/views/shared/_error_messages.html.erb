@@ -1,8 +1,11 @@
 <% if object.errors.any? %>
   <div class="alert-message block-message warning">
-    <h2><%= pluralize(object.errors.count, "error") %> 
-        prohibited this <%= object.class.to_s.underscore.humanize.downcase %> 
-        from being saved:</h2>
+    <h2>Sorry, <%= pluralize(object.errors.count, "error") %> 
+       occured: </h2>
+    
+  <!--  prohibited this <%= object.class.to_s.underscore.humanize.downcase %> 
+        from being saved:</h2> -->
+        
     <p>There were problems with the following:</p>
     <h5>
     <ul>

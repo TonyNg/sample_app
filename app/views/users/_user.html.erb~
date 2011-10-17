@@ -1,51 +1,48 @@
-<table id="table index">
-<h5>
+<li class="index">
   <%= gravatar_for user, :size => 150 %>
      <!--<%= user.email %>--> 
 
-  <tbody>
-    <tr>
-      <th>Name</th>
-        <td> <%= link_to user.name, user %> </td>
-    </tr>
-    <tr>
-      <th>Year in College</th>
-        <td><%= user.year %></td>
-    </tr>
-    <tr>
-      <th>Major/Concentration</th>
-        <td><%= user.major %></td>
-    </tr>
-    <tr>
-      <th>Things I'd buy</th>
-        <td><%= user.books_buy %></td>
-    </tr>
-    <tr>
-      <th>Things I'm selling</th>
-        <td><%= user.books_sell %></td>
-    </tr>
-    <tr>
-      <th>Facebook</th>
-        <td><%= user.facebook %></td>
-    </tr>
-    <tr>
-      <th>I love eating at</th>
-        <td><%= user.restaurants %></td>
-    </tr>
-    <tr>
-      <th>Sports/Clubs/Activities/Interests</th>
-        <td><%= user.interests %></td>
-    </tr>
-    <tr>
-      <th>Number of followers</th>
-        <td><%= pluralize(user.followers.count, "follower") %></td>
-    </tr>
+    <div>
+      <th>Name:</th>
+        <b> <%= link_to user.name, user %> </b>
+    </div>
+    <div>
+      <th>Year in College:</th>
+        <b><%= user.year %></b>
+    </div>
+    <div>
+      <th>Major/Concentration:</th>
+        <b><%= user.major %></b>
+    </div>
+    <div>
+      <th>Things I'd buy:</th>
+        <b><%= user.books_buy %></b>
+    </div>
+    <div>
+      <th>Things I'm selling:</th>
+        <b><%= user.books_sell %></b>
+    </div>
+    <div>
+      <th>Facebook:</th>
+        <b><%= user.facebook %></b>
+    </div>
+    <div>
+      <th>I love eating at:</th>
+        <b><%= user.restaurants %></b>
+    </div>
+    <div>
+      <th>Sports/Clubs/Activities/Interests:</th>
+        <b><%= user.interests %></b>
+    </div>
+    <div>
+      <th>Number of followers:</th>
+        <strong><%= pluralize(user.followers.count, "follower") %></strong>
+    </div>
  
   <% if current_user.admin? %>
   | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete #{user.name}" %>
         
   <% end %>
-  </tbody>
-  </h5>
-</table>
+  </li>
+
