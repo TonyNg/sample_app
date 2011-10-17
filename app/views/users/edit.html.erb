@@ -2,57 +2,60 @@
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
+     <div class="form-stacked">
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.label :"name" %>
+    <%= f.text_field :name, :placeholder => "Your real name" %>
+  </div>
+    <div class="field">
+    <%= f.label :"Facebook Page"%>
+    <%= f.text_field :facebook, :placeholder => "Required for identity confirmation" %>
   </div>
   <div class="field">
-    <%= f.label :"email (your csupomona.edu address)"%><br />
-    <%= f.text_field :email %>
+    <%= f.label :"email" %>
+    <%= f.text_field :email,  :placeholder => "Your csupomona.edu address"%>
   </div>
   <div class="field">
-    <%= f.label :"Facebook webpage (required for identity confirmation)" %><br />
-    <%= f.text_field :facebook %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation %> 
   </div>
-   <div class="field">
-    <%= f.label :"Year (For example: 3rd)" %><br />
-    <%= f.text_field :year %>
+  <!-- For a list of majors <%= select(:user, :year, [['Lisbon', 1], ['Madrid', 2], ['New York', 3]]) %> -->
+  <div class="field">
+    <%= f.label :"Year" %>
+    <%= f.select :year, (1..8).map { |year| [ year.ordinalize, year ] } %>
   </div>
   <div class="field">
-    <%= f.label :"Major/Concentration" %><br />
+    <%= f.label :"Major/Concentration" %>
     <%= f.text_field :major %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to buy these books" %><br />
+    <%= f.label :"I'm looking to buy these books/furniture/electronics" %>
     <%= f.text_field :books_buy %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to sell these books" %><br />
+    <%= f.label :"I'm looking to sell these books/furniture/electronics" %>
     <%= f.text_field :books_sell %>
   </div>
   <div class="field">
-    <%= f.label :"I love to eat at these restaurants" %><br />
+    <%= f.label :"I love to eat at these restaurants" %>
     <%= f.text_field :restaurants %>
   </div>
   <div class="field">
-    <%= f.label :"My Sports/Clubs/Activities/Interests" %><br />
+    <%= f.label :"My Sports/Clubs/Activities/Interests" %>
     <%= f.text_field :interests %>
   </div>
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<div>
+  <div>
   <%= gravatar_for @user %>
   <a href="http://gravatar.com/emails">change</a>
 </div>
+  <p>
+  <div>
+    <%= f.submit "Update", :class => "btn primary" %>
+  </div>
+  </div>
+<% end %>
 

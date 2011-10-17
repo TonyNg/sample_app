@@ -2,8 +2,9 @@
   <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="micropost">What's up?</h1>
+        <h3 class="micropost">What's going on?</h3>
         <%= render 'shared/micropost_form' %>
+                <h3 class="micropost">Newsfeed</h3>
         <%= render 'shared/feed' %>
       </td>
       <td class="sidebar round">
@@ -13,16 +14,36 @@
     </tr>
   </table>
 <% else %>
-  <h1>Hello Cal Poly Pomona!</h1>
 
-  <p>
-    Who are you on campus?
-    Need a way to sell/buy your books affordably? 
-    Voice your opinions
-    here and be heard.
-    <p>
-    Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
-  </p>
-
-  <%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+ <div class="hero-unit">
+          <h1>Hello Cal Poly Pomona!</h1>
+          <p>
+          <p>Need a way to communicate with your peers on campus?
+          A way to sell/buy your books affordably? 
+          Voice your opinions
+          here and be heard.
+          Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
+          </p>
+        <br>
+          <p><a> <%= link_to "Sign up now!", signup_path, :class=>"btn primary large" %> </a></p>
+          
+          - OR -
+          <hr />
+          
+           <signin>
+           <%= form_for(:session, :url => sessions_path) do |f| %>
+           	<div class="field">
+           		<%= f.label :email %><br />
+           		<%= f.text_field :email %>
+           	</div>
+           	<div class="field">
+           		<%= f.label :password %><br />
+           		<%= f.password_field :password %>
+           	</div>
+           	<div>
+           		<%= f.submit "Sign in", :class => "btn primary" %>
+           	</div>
+           	<% end %>
+           	</signin>
+           </div>
 <% end %>

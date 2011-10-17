@@ -1,19 +1,28 @@
 <header>
 <%= link_to logo, root_path %>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Home", root_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Find", users_path %></li>
-      <li><%= link_to "Profile", current_user %></li>
-      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-      <% end %>
-      <li><%= link_to "Help", help_path %></li>
-      <% if signed_in? %>
-      <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
-      <% else %>
-      <li><%= link_to "Sign in", signin_path %></li>
-      <% end %>
-    </ul>
-  </nav>
+<span class="label success">BETA</span>	
+      <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">Poly Who</a>
+          <ul class="nav">
+            <li><%= link_to "Home", root_path %></li>
+            <% if signed_in? %>
+            <li><%= link_to "Find", users_path %></li>
+            <li><%= link_to "Edit", edit_user_path(current_user) %></li>
+            <li><%= link_to "Profile", current_user %></li>
+            <% end %>
+            <li><%= link_to "Help", help_path %></li>
+            <% if signed_in? %>
+            <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+            <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+            <% end %>
+          </ul>
+          <% if signed_in? %>
+          <p class="pull-right">Logged in as <%= link_to @current_user.name, current_user %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
 </header>

@@ -6,7 +6,6 @@
 <!--  <div class="photo">
   <%= f.file_field :photo %>
   </div> -->
-  <div class="actions">
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit", :class => "btn primary" %>
   </div>
 <% end %>

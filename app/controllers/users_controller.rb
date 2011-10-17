@@ -23,7 +23,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to Poly Who! Click on the 'Find' tab to search for your classmates."
+      flash[:success] = "Welcome to Poly Who! Click on 'Find' to search for your classmates."
       redirect_to @user
     else
       @title = "Sign up"

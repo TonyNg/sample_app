@@ -1,24 +1,51 @@
-<li>
+<table id="table index">
+<h5>
   <%= gravatar_for user, :size => 150 %>
-  My name is: &nbsp;<b><%= link_to user.name, user %></b>
-  <%= user.email %> 
-  <br>
-  Year in college:   &nbsp;  <b><%= user.year %></b>
-  <br>
-  Major/Concentration:    &nbsp; <b><%= user.major %></b> 
-  <br>
-  Books I'm selling:  &nbsp;   <b><%= user.books_sell %></b> 
-  <br>
-  Books I'd buy:   &nbsp;  <b><%= user.books_buy %></b> 
-  <br>
-  Facebook:   &nbsp;  <b><%= user.facebook %></b> 
-  <br>
-  I love eating at:  &nbsp;   <b><%= user.restaurants %></b>
-  <br>
-  Clubs/Activities/Interests:  &nbsp;   <b><%= user.interests %></b>
+     <!--<%= user.email %>--> 
+
+  <tbody>
+    <tr>
+      <th>Name</th>
+        <td> <%= link_to user.name, user %> </td>
+    </tr>
+    <tr>
+      <th>Year in College</th>
+        <td><%= user.year %></td>
+    </tr>
+    <tr>
+      <th>Major/Concentration</th>
+        <td><%= user.major %></td>
+    </tr>
+    <tr>
+      <th>Things I'd buy</th>
+        <td><%= user.books_buy %></td>
+    </tr>
+    <tr>
+      <th>Things I'm selling</th>
+        <td><%= user.books_sell %></td>
+    </tr>
+    <tr>
+      <th>Facebook</th>
+        <td><%= user.facebook %></td>
+    </tr>
+    <tr>
+      <th>I love eating at</th>
+        <td><%= user.restaurants %></td>
+    </tr>
+    <tr>
+      <th>Sports/Clubs/Activities/Interests</th>
+        <td><%= user.interests %></td>
+    </tr>
+    <tr>
+      <th>Number of followers</th>
+        <td><%= pluralize(user.followers.count, "follower") %></td>
+    </tr>
+ 
   <% if current_user.admin? %>
   | <%= link_to "delete", user, :method => :delete, :confirm => "You sure?",
                                 :title => "Delete #{user.name}" %>
         
   <% end %>
-</li>
+  </tbody>
+  </h5>
+</table>

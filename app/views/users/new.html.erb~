@@ -2,60 +2,61 @@
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
+  <div class="form-stacked">
   <div class="field">
-    <%= f.label :"name (Your real name)" %><br />
+    <%= f.label :"name (Your real name)" %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :"email (Your csupomona.edu address)" %><br />
+    <%= f.label :"email (Your csupomona.edu address)" %>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :"Facebook webpage (required for identity confirmation)" %><br />
+    <%= f.label :"Facebook webpage (required for identity confirmation)" %>
     <%= f.text_field :facebook %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.label :password_confirmation, "Confirmation" %>
     <%= f.password_field :password_confirmation %> 
   </div>
   <br>
-  You may skip the fields below and fill it in later.
+  You may skip the fields below and fill them in later.
   <br>
   <br>
   <div class="field">
-    <%= f.label :"year" %><br />
+    <%= f.label :"Year (For example: 3rd)" %>
     <%= f.text_field :year %>
   </div>
   <div class="field">
-    <%= f.label :"major" %><br />
+    <%= f.label :"Major/Concentration" %>
     <%= f.text_field :major %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to buy these books" %><br />
+    <%= f.label :"I'm looking to buy these books/furniture/electronics" %>
     <%= f.text_field :books_buy %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to sell these books" %><br />
+    <%= f.label :"I'm looking to sell these books/furniture/electronics" %>
     <%= f.text_field :books_sell %>
   </div>
   <div class="field">
-    <%= f.label :"I love to eat at these restaurants" %><br />
+    <%= f.label :"I love to eat at these restaurants" %>
     <%= f.text_field :restaurants %>
   </div>
   <div class="field">
-    <%= f.label :"Clubs/Activities/Interests" %><br />
+    <%= f.label :"My Sports/Clubs/Activities/Interests" %>
     <%= f.text_field :interests %>
   </div>
-  <div>
-  <%= f.label :"Terms of Agreement (By checking this box, you have agreed to PolyWho's Terms of Agreement below)" %> <br />
+  <div class="checkbox">
+  <%= f.label :"Terms of Agreement (By checking this box, you have agreed to PolyWho's Terms of Agreement below)" %>
   <%= f.check_box :check %> 
   </div>
   <br>
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "btn primary" %>
+  </div>
   </div>
 <% end %>

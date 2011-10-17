@@ -1,10 +1,13 @@
 <h1>Find your fellow classmates!</h1>
 
-Search by using keywords for best results.
+Search by using keywords instead of whole sentences for best results.
 <% form_tag users_path, :method => 'get' do %>
   <fieldset class="search">
+  <a class="btn default">
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search", :class => "btn primary", :name => nil %>
+    </a>
+    </a>
   </fieldset>
 <% end %>
 
