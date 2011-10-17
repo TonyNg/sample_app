@@ -6,7 +6,7 @@
       <%= @user.name %>   
         <br>
         <div class="space"> <%= render 'follow_form' if signed_in? %> </div>
-         <%= gravatar_for @user, :size => 350 %>
+         <%= gravatar_for @user, :size => 400 %>
       </h1>
    <% unless @user.microposts.empty? %>
         <table class="microposts" summary="User microposts">
