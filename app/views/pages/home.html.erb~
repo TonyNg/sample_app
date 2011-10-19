@@ -18,11 +18,12 @@
  <div class="hero-unit">
           <h1>Hello Cal Poly Pomona!</h1>
           <p>
-          <p>Need a way to communicate with your peers on campus?
+          <p>Want to meet people at school based on similar activities and interests?
           A way to sell/buy your books affordably? 
+          Our aim is to build a close-knit community on campus.
           Voice your opinions
           here and be heard.
-          Sign up with your <i><b>csupomona.edu</b></i> email address to begin!
+          Sign up with your <i><strong>csupomona.edu</strong></i> email address to begin!
           </p>
         <br>
           <p><a> <%= link_to "Sign up now!", signup_path, :class=>"btn primary large" %> </a></p>

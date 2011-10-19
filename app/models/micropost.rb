@@ -1,5 +1,5 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :photo  
+  attr_accessible :content, :photo, :name  
   belongs_to :user
   
   def flaggable

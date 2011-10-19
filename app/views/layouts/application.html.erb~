@@ -6,13 +6,15 @@
     <%= favicon_link_tag 'favicon.ico'%>
     <%= render 'layouts/stylesheets' %>
     <%= javascript_include_tag :defaults %>
-    <%= javascript_include_tag 'jquery', 'application' %>
+    <%= javascript_include_tag 'application' %>
+    <% javascript :defaults, 'endless_page' %>
   </head>
   <body>
     <div class="container">
       <%= render 'layouts/facebooklike' %>
       <%= render 'layouts/header' %>
-<section class="round">
+      <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+      <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>

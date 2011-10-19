@@ -4,16 +4,16 @@
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="form-stacked">
   <div class="field">
-    <%= f.label :"name (Your real name)" %>
-    <%= f.text_field :name %>
+    <%= f.label :"name" %>
+    <%= f.text_field :name, :placeholder => "Your real name" %>
+  </div>
+    <div class="field">
+    <%= f.label :"Facebook Page"%>
+    <%= f.text_field :facebook, :placeholder => "Required for identity confirmation" %>
   </div>
   <div class="field">
-    <%= f.label :"email (Your csupomona.edu address)" %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :"Facebook webpage (required for identity confirmation)" %>
-    <%= f.text_field :facebook %>
+    <%= f.label :"email" %>
+    <%= f.text_field :email,  :placeholder => "Your csupomona.edu address"%>
   </div>
   <div class="field">
     <%= f.label :password %>
@@ -24,12 +24,18 @@
     <%= f.password_field :password_confirmation %> 
   </div>
   <br>
-  You may skip the fields below and fill them in later.
+  
+  <div class="alert-message info">
+  <a class="close" href="#"></a>
+  <p>You may skip the fields below and fill them in later.  &darr;  Just scroll down to the bottom to finish signing up. &darr; </p>
+</div>
+  
   <br>
   <br>
+  <!-- For a list of majors <%= select(:user, :year, [['Lisbon', 1], ['Madrid', 2], ['New York', 3]]) %> -->
   <div class="field">
-    <%= f.label :"Year (For example: 3rd)" %>
-    <%= f.text_field :year %>
+    <%= f.label :"Year" %>
+    <%= f.select :year, (1..8).map { |year| [ year.ordinalize, year ] } %>
   </div>
   <div class="field">
     <%= f.label :"Major/Concentration" %>
@@ -52,7 +58,7 @@
     <%= f.text_field :interests %>
   </div>
   <div class="checkbox">
-  <%= f.label :"Terms of Agreement (By checking this box, you have agreed to PolyWho's Terms of Agreement below)" %>
+  <label> By checking this box, I agree to the Terms of Agreement below.</label>
   <%= f.check_box :check %> 
   </div>
   <br>

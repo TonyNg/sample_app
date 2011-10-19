@@ -36,7 +36,7 @@ background-color:#57a957;background-repeat:repeat-x;background-image:-khtml-grad
 }
 
 section {
-  margin-top: 1em;
+  margin-top: 0.5em;
   font-size: 100%;
   font-family: "Helvetica Neue";
   padding: 20px;
@@ -174,12 +174,13 @@ td.main {
 
 td.sidebar {
   margin-top: 15px;
-  border: 2px solid #B5B5B5;
+  border: 1px double #D1D1D1;
   width: 20%;
   padding: 2em;
-  font-weight: bold;
+  font-weight: none;
   vertical-align: top;
-  background: #ffc;
+  background: #FFFACD;
+  
 }
 
 .profile img.gravatar {

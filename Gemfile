@@ -5,6 +5,7 @@ gem 'rails', '3.0.10'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'omniauth'
 gem 'make_flaggable'
 gem 'aws-s3'
 gem 'paperclip'
