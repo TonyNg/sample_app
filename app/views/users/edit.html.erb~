@@ -2,18 +2,18 @@
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-    <div class="form-stacked">
+     <div class="form-stacked">
   <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.label :"name" %>
+    <%= f.text_field :name, :placeholder => "Your real name" %>
+  </div>
+    <div class="field">
+    <%= f.label :"Facebook Page"%>
+    <%= f.text_field :facebook, :placeholder => "Required for identity confirmation" %>
   </div>
   <div class="field">
-    <%= f.label :"email (your csupomona.edu address)"%>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :"Facebook webpage (required for identity confirmation)" %>
-    <%= f.text_field :facebook %>
+    <%= f.label :"email" %>
+    <%= f.text_field :email,  :placeholder => "Your csupomona.edu address"%>
   </div>
   <div class="field">
     <%= f.label :password %>
@@ -21,11 +21,12 @@
   </div>
   <div class="field">
     <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation %> 
   </div>
-   <div class="field">
-    <%= f.label :"Year (For example: 3rd)" %>
-    <%= f.text_field :year %>
+  <!-- For a list of majors <%= select(:user, :year, [['Lisbon', 1], ['Madrid', 2], ['New York', 3]]) %> -->
+  <div class="field">
+    <%= f.label :"Year" %>
+    <%= f.select :year, (1..8).map { |year| [ year.ordinalize, year ] } %>
   </div>
   <div class="field">
     <%= f.label :"Major/Concentration" %>

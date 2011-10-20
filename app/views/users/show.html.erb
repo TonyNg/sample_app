@@ -1,4 +1,40 @@
-
+  <h1>About me:</h1>
+  <div>
+      <th>Name:</th>
+        <b> <%= @user.name %> </b>
+    </div>
+    <div>
+      <th>Year in College:</th>
+        <b><%= @user.year %></b>
+    </div>
+    <div>
+      <th>Major/Concentration:</th>
+        <b><%= @user.major %></b>
+    </div>
+    <div>
+      <th>Things I'd buy:</th>
+        <b><%= @user.books_buy %></b>
+    </div>
+    <div>
+      <th>Things I'm selling:</th>
+        <b><%= @user.books_sell %></b>
+    </div>
+    <div>
+      <th>Message me on Facebook:</th>
+        <b> <%= @user.facebook %> </b>
+    </div>
+    <div>
+      <th>I love eating at:</th>
+        <b><%= @user.restaurants %></b>
+    </div>
+    <div>
+      <th>Sports/Clubs/Activities/Interests:</th>
+        <b><%= @user.interests %></b>
+    </div>
+    <div>
+      <th>Number of followers:</th>
+        <strong><%= pluralize(@user.followers.count, "follower") %></strong>
+    </div>
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
