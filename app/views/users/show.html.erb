@@ -1,3 +1,12 @@
+  <h1>  
+     <%= @user.name %>   
+        <br>
+        <div class="space"> 
+        <div class="follow_form">
+        <%= render 'follow_form' if signed_in? %>
+        </div>
+        </div>
+  </h1>
   <h1>About me:</h1>
   <div>
       <th>Name:</th>
@@ -39,13 +48,6 @@
   <tr>
     <td class="main">
       <h1>
-      <%= @user.name %>   
-        <br>
-        <div class="space"> 
-        <div class="follow_form">
-        <%= render 'follow_form' if signed_in? %>
-        </div>
-        </div>
          <%= gravatar_for @user, :size => 400 %>
       </h1>
    <% unless @user.microposts.empty? %>
