@@ -1,7 +1,6 @@
 <li class="index">
   <%= gravatar_for user, :size => 150 %>
      <!--<%= user.email %>--> 
-
     <div>
       <th>Name:</th>
         <b> <%= link_to user.name, user %> </b>
@@ -23,8 +22,8 @@
         <b><%= user.books_sell %></b>
     </div>
     <div>
-      <th>Facebook:</th>
-        <b><%= user.facebook %></b>
+      <th>Message me on Facebook:</th>
+        <b> <%= user.facebook %> </b>
     </div>
     <div>
       <th>I love eating at:</th>
