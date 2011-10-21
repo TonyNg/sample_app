@@ -323,7 +323,10 @@ form.new_micropost textarea {
 /* Search Form */
 
 
+
 /*Submit button*/
+
+/*
 .search input, .search button {
 
 	background-image: -moz-linear-gradient(
@@ -333,8 +336,10 @@ form.new_micropost textarea {
 		rgb(38,212,61) 86%
 	);
 	text-shadow: white 1px 1px 5px;
-	padding: 8px;
+	padding: 8px; 
 }
+
+*/
 
 /* trying to alter the follow button*/
 /*

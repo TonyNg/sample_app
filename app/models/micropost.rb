@@ -23,7 +23,7 @@ class Micropost < ActiveRecord::Base
 #validates_attachment_size :photo, :less_than => 5.megabytes
 #validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
   
-  validates :content, :presence => true, :length => { :maximum => 400 }
+  validates :content, :presence => true, :length => { :maximum => 1200 }
   validates :user_id, :presence => true
   
   default_scope :order => 'microposts.created_at DESC'
