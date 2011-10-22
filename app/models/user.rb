@@ -50,12 +50,12 @@ class User < ActiveRecord::Base
 					   
   validates :major, :length		=> { :maximum => 60}
   validates :year, :length		=> { :maximum => 30}				
-  validates :books_buy, :length		=> { :maximum => 200}																	
-  validates :books_sell, :length		=> { :maximum => 200}																	
+  validates :books_buy, :length		=> { :maximum => 400}																	
+  validates :books_sell, :length		=> { :maximum => 400}																	
   validates :facebook, :presence => true,
 					   :length		=> { :maximum => 80}																	
-  validates :restaurants, :length		=> { :maximum => 80}																	
-  validates :interests, :length		=> { :maximum => 160}																	
+  validates :restaurants, :length		=> { :maximum => 100}																	
+  validates :interests, :length		=> { :maximum => 300}																	
 													
 																	
 					

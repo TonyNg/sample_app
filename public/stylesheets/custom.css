@@ -320,6 +320,17 @@ form.new_micropost textarea {
   margin-bottom: 0;
 }
 
+form.new_user textarea {
+  height: 6em;
+  width: 40em;
+  color: black;
+ }
+
+form.edit_user textarea {
+  height: 6em;
+  width: 40em;
+  color: black;
+ }
 /* Search Form */
 
 

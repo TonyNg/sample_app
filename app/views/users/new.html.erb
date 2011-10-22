@@ -32,7 +32,18 @@
   
   <br>
   <br>
-  <!-- For a list of majors <%= select(:user, :year, [['Lisbon', 1], ['Madrid', 2], ['New York', 3]]) %> -->
+  <!-- For a list of majors <%= select(:user, :year, [['Accounting', 1], ['Aerospace Engineering', 2], ['Agriculture', 3],
+  ['Agricultural Science', 4],['Animal Health Science', 5],['Anthropology', 6],['Apparel Merchandising & Management', 7],['Architecture', 8],['Art', 9],
+  ['Biology', 10],['Biotechology', 11],['Botany', 12],['Chemical & Materials Engineering', 13],['Chemistry', 14],
+  ['Civil Engineering', 15],['Communication', 16],['Computer Engineering', 17],['Computer Information Systems', 18],['Computer Science', 19],
+  ['Construction Engineering Technology', 20],['E-Business', 21],['Economics', 22],['Education', 23],['Electrical Engineering', 24],
+  ['Electronics & Computer Engineering', 25],['Engineering Management', 26],['Engineering Technology', 27],['English', 28],['Environmental Biology', 29],
+  ['Finance, Real Estate & Law', 30],['Food Marketing & Agribusiness Management', 31],['Food Science & Technology', 32],['Foods & Nutrition', 33],['Gender, Ethnicity & Multicultural Studies', 34],
+  ['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],
+  ['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],
+  ['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],['Finance, Real Estate & Law', 30],
+  ['New York', 35]]) %> -->
+  
   <div class="field">
     <%= f.label :"Year" %>
     <%= f.select :year, (1..8).map { |year| [ year.ordinalize, year ] } %>
@@ -42,19 +53,19 @@
     <%= f.text_field :major %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to buy these books/furniture/electronics" %>
-    <%= f.text_field :books_buy %>
+    <%= f.label :"I'm looking to buy these books/furniture/electronics:" %>
+    <%= f.text_area :books_buy %>
   </div>
   <div class="field">
-    <%= f.label :"I'm looking to sell these books/furniture/electronics" %>
-    <%= f.text_field :books_sell %>
+    <%= f.label :"I'm looking to sell these books/furniture/electronics:" %>
+    <%= f.text_area :books_sell %>
   </div>
   <div class="field">
-    <%= f.label :"I love to eat at these restaurants" %>
+    <%= f.label :"I love to eat at these restaurants:" %>
     <%= f.text_field :restaurants %>
   </div>
   <div class="field">
-    <%= f.label :"My Sports/Clubs/Activities/Interests" %>
+    <%= f.label :"My Sports/Clubs/Activities/Interests:" %>
     <%= f.text_field :interests %>
   </div>
   <div class="checkbox">

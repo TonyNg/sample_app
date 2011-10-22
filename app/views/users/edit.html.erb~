@@ -50,7 +50,7 @@
   </div>
   <div>
   <%= gravatar_for @user %>
-  <a href="http://gravatar.com/emails">change</a>
+  <a href="http://en.gravatar.com/site/signup/">Upload a photo (Sign up for Gravatar, it's free!)</a>
 </div>
   <p>
   <div>
