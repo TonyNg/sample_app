@@ -3,8 +3,8 @@ class PagesController < ApplicationController
   def home
     @title = "Home"
     if signed_in?
-      @micropost = Micropost.new
-      @feed_items = current_user.feed.paginate(:page => params[:page])
+	  redirect_to users_path
+      
     end
   end
 
@@ -22,5 +22,7 @@ class PagesController < ApplicationController
 
   def index
 	@title = "Index"
+	@micropost = Micropost.new
+      @feed_items = current_user.feed.paginate(:page => params[:page])
   end
 end
