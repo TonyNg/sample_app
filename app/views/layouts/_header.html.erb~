@@ -4,7 +4,8 @@
       <div class="topbar">
       <div class="topbar-inner">
         <div class="container-fluid">
-          <a class="brand" href="#">Poly Who</a>
+          <a><%= link_to "Poly Who", root_path, :class=>"brand" %></a>
+
           <ul class="nav">
             <li><%= link_to "Home", root_path %></li>
             <% if signed_in? %>
