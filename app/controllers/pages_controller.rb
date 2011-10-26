@@ -21,8 +21,8 @@ class PagesController < ApplicationController
   end
 
   def index
-	@title = "Index"
-	@micropost = Micropost.new
-      @feed_items = current_user.feed.paginate(:page => params[:page])
+  	@title = "Index"
+	   	@micropost = Micropost.new
+	@feed_items = current_user.feed.paginate(:page => params[:page])
   end
 end
